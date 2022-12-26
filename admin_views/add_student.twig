@@ -1,0 +1,29 @@
+{% extends "__content.twig" %}
+
+{% block content %}
+    <div class="container">
+        <form action="" method="POST">
+            <div class="col-3">
+                <label>Name</label>
+                <input type="text" name="name" class="form-control" placeholder="Name" id="name">
+                <label>Genger</label>
+                <input type="text" name="gender" class="form-control" placeholder="Gender" id="gender"> 
+                <label>Date of birth</label>
+                <input type="text" name="date" class="form-control" placeholder="Date of birth" id="birthdate">   
+                <div class="col-4">
+                    <label class="form-label">Group</label>
+                    <select class="form-control" name="group_id">
+                        {% for group in groups %}
+                            <option value="{{group.id}}">
+                                {{group.code}}-{{group.year}}-{{group.number}}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary">Add student</button>            
+                </div>
+            </div>                    
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "main_layout.twig" %}
+
+{% block maincontent %}
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Subject</th>
+                <th scope="col">Grade</th>
+            </tr>
+          </thead>
+          <tbody> 
+              {% for mark in marks %}
+                <tr>
+                    <th>{{mark.1}}</th>
+                    <th>{{mark.3}}</th>
+                </tr>
+              {% endfor %}
+          </tbody>
+        </table>
+    </table>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "__layout.twig" %}
+
+{% block layout %}
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/" >
+                <i class="fa-solid fa-graduation-cap"></i>
+                E-learnig system
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button> 
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link " href="/add">Add student</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        Log out
+                </a>                 
+            </li>
+            </ul>
+            {# <form class="d-flex" action="/search">
+                <input class="form-control me-2" type="search" placeholder="Record number" aria-label="Search">
+                <button class="btn btn-outline-secondary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form> #}
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        {% block content %}
+        {% endblock %}    
+    </div> 
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "__content.twig" %}
+
+{% block content %}
+    <div class="container">
+        <form action="" method="POST">
+            <div class="col-3">
+                <label class="form-label">Mark</label>
+                    <select class="form-control" name="mark">
+                        {% for i in 1..5 %}
+                            <option value="{{i}}">
+                                {{i}}
+                            </option>
+                        {% endfor %}
+                    </select> 
+            </div> 
+            <div class="col-3">
+                <label class="form-label">Subject</label>
+                    <select class="form-control" name="subject">
+                        {% for subject in subjects %}
+                            <option value="{{subject.subject_name}}">
+                                {{subject.subject_name}}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary">Add mark</button>            
+                </div>                   
+        </form>
+    </div>
+{% endblock %}

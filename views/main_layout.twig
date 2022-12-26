@@ -1,0 +1,31 @@
+{% extends "__content.twig" %}
+
+{% block content %}
+    <h1>E-learning system</h1>
+    <hr>
+    <div class="row">
+        <div class="col-3" style="border: 1px solid lightgrey; border-radius: 10px;">
+            <h5>Navigation</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/user">Profile</a>
+                </li>
+                {% for subject in subjects %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-angle-right"></i>
+                            {{subject.0}}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-9">
+            <h2>{{header}}</h2>
+            <hr>
+            {% block maincontent %}
+            {% endblock %}
+        </div>
+    </div>
+    
+{% endblock %}

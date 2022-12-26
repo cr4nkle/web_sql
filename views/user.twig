@@ -1,0 +1,23 @@
+{% extends "main_layout.twig" %}
+
+{% block maincontent %}
+    <div class="container">
+        <form action="/user" method="POST">
+            <div class="col-3">
+                <label>Name</label>
+                <input type="text" name="name" class="form-control" placeholder="Name" id="name" value="{{students.name}}">
+                <label>Genger</label>
+                <input type="text" name="gender" class="form-control" placeholder="Gender" id="gender" value="{{students.gender}}"> 
+                <label>Record number</label>
+                <input type="text" name="record_number" class="form-control" placeholder="Record number" id="rec_number" value="{{students.record_number}}">
+                <label>Date of birth</label>
+                <input type="text" name="date" class="form-control" placeholder="Date of birth" id="birthdate" value="{{students.date}}">   
+                <label>Group code</label>
+                <input type="text" name="code" class="form-control" placeholder="Code" id="code" value="{{students.code}}-{{students.year}}-{{students.number}}">
+                <div class="col-3">
+                    <button type="submit" class="btn btn-primary">Edit</button>            
+                </div>
+            </div>                    
+        </form>
+    </div>
+{% endblock %}

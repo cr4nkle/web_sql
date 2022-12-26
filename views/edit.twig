@@ -1,0 +1,24 @@
+{% extends "main_layout.twig" %}
+
+{% block maincontent %}  
+    {% if message %}
+        <span>{{message}}</span>
+    {% endif %}
+    <form action="" enctype="multipart/form-data" method="POST">
+        <div class="col-4">
+            <label>Name</label>
+            <input type="text" name="name" class="form-control" placeholder="Name" id="name" value="{{students.name}}">
+        </div>
+        <div class="col-4">
+            <label>Genger</label>
+            <input type="text" name="gender" class="form-control" placeholder="Gender" id="gender" value="{{students.gender}}">
+        </div>
+        <div class="col-4">
+            <label>Date of birth</label>
+            <input type="text" name="date" class="form-control" placeholder="Date of birth" id="birthdate" value="{{students.date}}">
+        </div>
+        <div class="col-3">
+            <button type="submit" class="btn btn-primary">Save</button>            
+        </div>
+    </form>
+{% endblock %}
